@@ -44,7 +44,7 @@ Lors du défilement, l'arrière-plan bouge légèrement,  les feuilles du plan i
 1. **Créer le composant ChickenParallax.jsx :**
 
 Créez un fichier nommé ChickenParallax.jsx dans le dossier src.
-Ajoutez une balise <header></header> dans le return de votre composant.
+Ajoutez une balise `<header></header>` dans le return de votre composant.
 
 2. **Créer le fichier CSS ChickenParallax.css :**
 
@@ -61,14 +61,14 @@ Placez le composant au-dessus de la div "contentContainer" pour voir les changem
 1. **Ajouter une Nav Bar dans ChickenParallax :**
 
 Retournez dans le composant ChickenParallax.
-Ajoutez une balise <nav> à l'intérieur de la balise <header>.
-Dans la balise <nav>, ajoutez une balise <h2>Logo</h2> et une balise <ul> contenant quatre balises <li> (Home, About, Service, Contact).
+Ajoutez une balise `<nav>` à l'intérieur de la balise `<header>`.
+Dans la balise `<nav>`, ajoutez une balise `<h2>Logo</h2>` et une balise `<ul>` contenant quatre balises `<li>` (Home, About, Service, Contact).
 
 2. **Styliser la Nav Bar :**
 
 Utilisez la variable CSS --lightShades pour la couleur de la police.
-La balise <header> doit au moins contenir la propriétés CSS position relative
-La balise <nav> doit au moins contenir les propriétés CSS suivantes pour le bon fonctionnement du parallaxe :
+La balise `<header>` doit au moins contenir la propriétés CSS position relative
+La balise `<nav>` doit au moins contenir les propriétés CSS suivantes pour le bon fonctionnement du parallaxe :
 - position: absolute;
 - z-index: 1;
 
@@ -83,7 +83,7 @@ z-index : La propriété z-index: 10; définit l'ordre des couches des élément
 
 1. **Créer une div pour contenir les éléments mouvants :**
 
-En dessous de votre balise <nav>, créez une div avec l'ID #parallaxContainer.
+En dessous de votre balise `<nav>`, créez une div avec l'ID #parallaxContainer.
 Cette div devra avoir les propriétés CSS suivantes :
 position: relative;
 width: 100%;
@@ -91,7 +91,7 @@ aspect-ratio: 16/9;
 
 2. **Ajouter les images dans la nouvelle div :**
 
-Ajoutez dans cet ordre les images suivantes : fence,un <h1>, grass, coop, chicken, leafL et leafR
+Ajoutez dans cet ordre les images suivantes : fence,un `<h1>`, grass, coop, chicken, leafL et leafR
 Chaque élément devra avoir la className parallaxLayer et une position CSS absolute.
 
 **Explication des Propriétés CSS**
@@ -137,7 +137,16 @@ return () => { window.removeEventListener('scroll', handleScroll); } : Supprime 
 
 Pour chaque balise concernée, ajoutez l'attribut :
 
-style={{ transform: `translateX(${offsetY * -0.2}px)` }}
+`style={{ transform: ``translateX(${offsetY * -0.2}px)`` }}`
 
 Chaque élément qui a ce style est transformé en fonction de offsetY. 
 Essayez différentes valeurs positives ou négatives pour ajuster la vitesse et la direction du mouvement. Les éléments doivent avoir des valeurs différentes (vitesse) pour observer l'animation de l'effet parallaxe.
+
+## Remerciements à l'Auteur des Images
+
+Je tiens à remercier chaleureusement l'auteur des images utilisées dans ce projet.
+
+- Les images sont fournies par [cookie_pom_illustration](https://www.instagram.com/cookie_pom_Illustration/).
+- Ces images sont utilisées avec la permission de l'auteur et ne sont pas libres de droit.
+
+Merci à l'auteur pour sa générosité et son autorisation d'utilisation de ses magnifiques images.
