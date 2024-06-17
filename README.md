@@ -113,21 +113,24 @@ Lors du défilement, l'arrière-plan bouge légèrement,  les feuilles du plan i
 
 2. **Créer la fonction handleScroll :**
 
+```javascript
 const handleScroll = () => {
     setOffsetY(window.scrollY);
 };
-
+```
 - handleScroll : Cette fonction est appelée à chaque fois que l'utilisateur fait défiler la page.
 - setOffsetY(window.scrollY) : Met à jour offsetY avec la position verticale actuelle du défilement de la fenêtre (window.scrollY).
 
 3. **Utiliser useEffect pour attacher et détacher l'écouteur d'événements de défilement :**
 
+```javascript
 useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
         window.removeEventListener('scroll', handleScroll);
     };
 }, []);
+```
 
 - useEffect : Un hook qui permet d'exécuter des effets de bord dans les composants fonctionnels.
 - window.addEventListener('scroll', handleScroll) : Ajoute l'écouteur d'événements de défilement lorsque le composant est monté.
