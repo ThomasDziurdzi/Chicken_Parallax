@@ -5,7 +5,7 @@ import coop from '../assets/coop.png';
 import chicken from '../assets/chicken.png';
 import leafL from '../assets/leafL.png';
 import leafR from '../assets/leafR.png';
-import chickenLogo from '../assets/chickenlogo.png'
+
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -17,7 +17,6 @@ function ChickenParallax() {
     //Lorsqu'on fait défiler la page, handleScroll est appelée et la position actuelle de défilement est stockée dans offsetY
     const handleScroll = () => {
         setOffsetY(window.scrollY);
-
     };
 
     console.log(window.scrollY) //https://developer.mozilla.org/fr/docs/Web/API/Window/scrollY
@@ -33,6 +32,8 @@ function ChickenParallax() {
         };
     }, []);
 
+    
+
     return (
         <header>
             <nav style={{ transform: `translateY(${offsetY * 1}px)` }}>
@@ -46,10 +47,10 @@ function ChickenParallax() {
             </nav>
             <div id='parallaxContainer'>
                 <img src={fence} alt="fence" className="parallaxLayer" style={{ transform: `translateX(${offsetY * -0.2}px)` }} /> {/* TranslateX: défilement horizontal */}
-                <h1 className="parallaxLayer" style={{ transform: `translateY(${offsetY * 0.9}px)` }}>Chicken Parallax</h1 > {/* TranslateY: défilement vertical */}
+                <h1 className="parallaxLayer" style={{ transform: `translateY(${offsetY * 1}px)` }}>Chicken Parallax</h1 > {/* TranslateY: défilement vertical */}
                 <img src={grass} alt="grass" className="parallaxLayer" />
                 <img src={coop} alt="coop" className="parallaxLayer" />
-                <img src={chicken} alt="chicken" className="parallaxLayer" style={{ transform: `translateY(${offsetY * 1.5}px)` }} />
+                <img src={chicken} alt="chicken" className="parallaxLayer" style={{ transform: `translateY(${offsetY * 2.5}px)` }} />
                 <img src={leafL} alt="leaf left" className="parallaxLayer" style={{ transform: `translateX(${offsetY * -0.8}px)` }} />
                 <img src={leafR} alt="leaf right" className="parallaxLayer" style={{ transform: `translateX(${offsetY * 0.8}px)` }} />
             </div>
